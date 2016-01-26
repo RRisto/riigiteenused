@@ -1,21 +1,6 @@
 {
     "debugBreakpointsState" : {
         "breakpoints" : [
-            {
-                "editor_line_number" : 58,
-                "editor_state" : 2,
-                "function_name" : "korrastaja",
-                "function_steps" : "",
-                "id" : 0,
-                "is_package_breakpoint" : true,
-                "is_pending_debug_completion" : false,
-                "line_number" : 58,
-                "needs_updated_steps" : true,
-                "package_name" : "riigiteenused",
-                "path" : "~/R/riigiteenused/R/andmedSisse.R",
-                "state" : 2,
-                "type" : 0
-            }
         ]
     }
 }
