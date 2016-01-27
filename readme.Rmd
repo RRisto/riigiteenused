@@ -1,9 +1,4 @@
----
-title: "Riigiteenuste pakett"
-author: "Risto Hinno"
-date: "27. jaanuar 2016"
-output: html_document
----
+##Riigiteenuste pakett
 See on riigiteenuste kaardistamisel tekkivate andmete (https://www.riigiteenused.ee/api/et/all) sisselugmist hõlbustav R-i lisamoodul (pakett).
 
 ###Installeerimine
