@@ -1,6 +1,6 @@
 #andmed pikaks, võtab eelenvad funktsioonid kokku, iga
 #aasta andmed teeb pikaks
-
+#' @export
 andmedPikaks=function(andmedLai) {
   vars=names(andmedLai) %in% c("regulatsioon", "objectId", "eluarisyndmus", "kirjeldus",
                                "eeltingimus", "jareltingimus", "createdAt",

@@ -1,4 +1,5 @@
 #abifunktsioon kõikide kanalite pikaks tegemiseks
+#' @export
 korrastaja=function(andmed, eemalda, mootmiseAasta) {
   library(reshape2)
   #eemalda - mis osa columnite nimedest tuleb eemdalda

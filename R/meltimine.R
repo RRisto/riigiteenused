@@ -1,4 +1,5 @@
 #abifunktsioon, mis teeb laiast pika formaadi
+#' @export
 meltimine=function(kanal, data) {
   library(reshape2)
   #leiame ainult seda kanalit puudutavad muutujad

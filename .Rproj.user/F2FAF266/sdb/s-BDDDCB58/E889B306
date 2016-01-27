@@ -1,12 +1,12 @@
 {
-    "contents" : "#abifunktsioon, mis teeb laiast pika formaadi\nmeltimine=function(kanal, data) {\n  library(reshape2)\n  #leiame ainult seda kanalit puudutavad muutujad\n  sub=data[, grepl(paste(kanal, \"|identifikaator|ministeerium|allasutus|tegevusvaldkond|teenusetyyp|makse\", sep=\"\"), names(data))]\n  #määran id-d, mis meltimisel meltimata jäävad\n  id=grep(c(\"identifikaator|ministeerium|allasutus|tegevusvaldkond|teenusetyyp|makse|link\"), names(sub), value=T)\n  #kui selle kanali kohta stati pole, anna vastuseks null\n  if(length(id)<7) {\n    tulem=NULL\n  } else {\n    #meldime andmed kitsaks\n    tulem=melt(sub, id=id)\n    #muudan variable nime ära, mis on kanalispets, muidu ei saa rbindida\n    names(tulem)=c(\"identifikaator\", \"tegevusvaldkond\", \"tyyp\", \"ministeerium\", \"allasutus\",\n                   \"makse\", \"link\",  \"variable\",\n                   \"value\")\n  }\n  tulem\n}\n",
+    "contents" : "#abifunktsioon, mis teeb laiast pika formaadi\n#' @export\nmeltimine=function(kanal, data) {\n  library(reshape2)\n  #leiame ainult seda kanalit puudutavad muutujad\n  sub=data[, grepl(paste(kanal, \"|identifikaator|ministeerium|allasutus|tegevusvaldkond|teenusetyyp|makse\", sep=\"\"), names(data))]\n  #määran id-d, mis meltimisel meltimata jäävad\n  id=grep(c(\"identifikaator|ministeerium|allasutus|tegevusvaldkond|teenusetyyp|makse|link\"), names(sub), value=T)\n  #kui selle kanali kohta stati pole, anna vastuseks null\n  if(length(id)<7) {\n    tulem=NULL\n  } else {\n    #meldime andmed kitsaks\n    tulem=melt(sub, id=id)\n    #muudan variable nime ära, mis on kanalispets, muidu ei saa rbindida\n    names(tulem)=c(\"identifikaator\", \"tegevusvaldkond\", \"tyyp\", \"ministeerium\", \"allasutus\",\n                   \"makse\", \"link\",  \"variable\",\n                   \"value\")\n  }\n  tulem\n}\n",
     "created" : 1453812684435.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3512860103",
+    "hash" : "1014798241",
     "id" : "E889B306",
-    "lastKnownWriteTime" : 1453812691,
+    "lastKnownWriteTime" : 1453888119,
     "path" : "~/R/riigiteenused/R/meltimine.R",
     "project_path" : "R/meltimine.R",
     "properties" : {
