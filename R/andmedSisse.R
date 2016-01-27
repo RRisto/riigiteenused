@@ -1,5 +1,5 @@
 #andmete downloadi abifunktsioon
-#@export
+#' @export
 andmedSisse=function(url) {
   #loeme andmed sisse
   library(jsonlite)
