@@ -9,9 +9,10 @@ laeb riigiteenuste andmed veebist JSON formaadist (https://www.riigiteenused.ee/
 \usage{
 andmedSisse(url)
 }
-%- maybe also 'usage' for other objects documented here.
-\details{
-url="https://www.riigiteenused.ee/api/et/all"}
+\arguments{
+  \item{url}{
+"https://www.riigiteenused.ee/api/et/all"
+}
 \value{
 tagastab dataframe'i
 }
@@ -22,10 +23,8 @@ tagastab dataframe'i
 Risto Hinno, ristohinno.com
 }
 \note{
-rohkem infot riigiteenuste kaardistmaise kohta on siin: https://github.com/MKM-ITAO/riigiteenused
+rohkem infot riigiteenuste kaardistmaise kohta on siin: https://github.com/MKM-ITAO/riigiteenused. Annab üldjuhul hoiatuse "incomplete final line found", mis ei mojuta andmete sisselugemist.
 }
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
