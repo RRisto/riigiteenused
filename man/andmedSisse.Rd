@@ -36,14 +36,8 @@ rohkem infot riigiteenuste kaardistmaise kohta on siin: https://github.com/MKM-I
 function ()
 {
     library(jsonlite)
-    andmed = fromJSON(readLines("https://www.riigiteenused.ee/api/et/all"),
+    fromJSON(readLines("https://www.riigiteenused.ee/api/et/all"),
         flatten = T)
-    andmed = andmed["teenuste_kanalid_ja_moodikud" != "list()"]
-    andmedMoodik <- rbindlist(lapply(andmed[["teenuste_kanalid_ja_moodikud"]],
-        function(x) {
-            as.list(unlist(x))
-        }), fill = TRUE)
-    andmed
   }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
