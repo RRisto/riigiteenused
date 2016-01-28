@@ -1,0 +1,18 @@
+{
+    "contents" : "#andmete downloadi abifunktsioon\n#' @export\nandmedSisse=function(url) {\n  #loeme andmed sisse\n  library(jsonlite)\n  #library(data.table)\n  andmed=fromJSON(readLines(url), flatten=T)\n  #andmed=andmed[\"teenuste_kanalid_ja_moodikud\"!=\"list()\"]\n  ##andmedMoodik <- rbindlist(lapply(andmed[[\"teenuste_kanalid_ja_moodikud\"]], function(x) {\n   # as.list(unlist(x))\n  #}), fill=TRUE)\n  andmed\n}\n\n\n",
+    "created" : 1453806075790.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "350896336",
+    "id" : "445E90D2",
+    "lastKnownWriteTime" : 1453996391,
+    "path" : "~/R/riigiteenused/R/andmedSisse.R",
+    "project_path" : "R/andmedSisse.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
