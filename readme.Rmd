@@ -18,6 +18,8 @@ library(riigiteenused)
 andmedLai=andmedSisse("https://www.riigiteenused.ee/api/et/all")
 ```
 
+Selle juures tasub tähele panna, et muutuja "regulatsioon" jätab listiks, mistõttu, ei saa seda cav/txt-na salvestada. Et csv-na salvestada, tuleb muutuja eemaldada (andmeLai$regulatsioon=NULL).
+
 - andmete laiast fromaadist pikaks formaadiks tegemine (eemaldab need muutujad, mis on laias formaadis: "regulatsioon", "objectId", "eluarisyndmus", "kirjeldus","eeltingimus", "jareltingimus", "createdAt","updatedAt", "keel", "osakondyksus", "omanikunimi","omanikutelefon","omanikuemail","konfinfo", "seotuddokumendid", "seisund","muudatustvajav", "aegumisekpv", "funktsioon", "veebiaadress"):
 
 ```{r, eval=FALSE}

@@ -77,6 +77,7 @@ install_github(&quot;RRisto/riigiteenused&quot;)</code></pre>
 </ul>
 <pre class="r"><code>library(riigiteenused)
 andmedLai=andmedSisse(&quot;https://www.riigiteenused.ee/api/et/all&quot;)</code></pre>
+<p>Selle juures tasub tähele panna, et muutuja “regulatsioon” jätab listiks, mistõttu, ei saa seda cav/txt-na salvestada. Et csv-na salvestada, tuleb muutuja eemaldada (andmeLai$regulatsioon=NULL).</p>
 <ul>
 <li>andmete laiast fromaadist pikaks formaadiks tegemine (eemaldab need muutujad, mis on laias formaadis: “regulatsioon”, “objectId”, “eluarisyndmus”, “kirjeldus”,“eeltingimus”, “jareltingimus”, “createdAt”,“updatedAt”, “keel”, “osakondyksus”, “omanikunimi”,“omanikutelefon”,“omanikuemail”,“konfinfo”, “seotuddokumendid”, “seisund”,“muudatustvajav”, “aegumisekpv”, “funktsioon”, “veebiaadress”):</li>
 </ul>
