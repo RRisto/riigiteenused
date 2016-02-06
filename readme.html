@@ -63,19 +63,19 @@ img {
 
 <div id="riigiteenuste-pakett" class="section level2">
 <h2>Riigiteenuste pakett</h2>
-<p>See on riigiteenuste kaardistamisel tekkivate andmete (<a href="https://www.riigiteenused.ee/api/et/all" class="uri">https://www.riigiteenused.ee/api/et/all</a>) sisselugmist hõlbustav R-i lisamoodul (pakett).</p>
+<p>See on riigiteenuste kaardistamisel tekkivate andmete (<a href="https://www.riigiteenused.ee/api/et/all" class="uri">https://www.riigiteenused.ee/api/et/all</a> või inglise keeles kirjeldatud teenuste andmed <a href="https://www.riigiteenused.ee/api/en/all" class="uri">https://www.riigiteenused.ee/api/en/all</a>) sisselugmist hõlbustav R-i lisamoodul (pakett). Riigiteenuste kaardistamise projekti kohta loe siit: <a href="https://github.com/MKM-ITAO/riigiteenused" class="uri">https://github.com/MKM-ITAO/riigiteenused</a>.</p>
 <div id="installeerimine" class="section level3">
 <h3>Installeerimine</h3>
-<pre class="r"><code>library(devtools)#kui devtools paketti pole, siis installi see install.packages(&quot;devtools&quot;)
+<pre class="r"><code>library(&quot;devtools&quot;)#kui devtools paketti pole, siis installi see install.packages(&quot;devtools&quot;)
 install_github(&quot;RRisto/riigiteenused&quot;)</code></pre>
 </div>
 <div id="kasutamine" class="section level3">
 <h3>Kasutamine</h3>
 <p>Hetkel on sisuliselt kaks funktsiooni, mida kasutada:</p>
 <ul>
-<li>andmete sisselugemine laias formaadis (lisaks konverdib JSONIst R-i dataframe’iks):</li>
+<li>andmete sisselugemine laias formaadis (lisaks konverdib JSONist R-i dataframe’iks):</li>
 </ul>
-<pre class="r"><code>library(riigiteenused)
+<pre class="r"><code>library(&quot;riigiteenused&quot;)
 andmedLai=andmedSisse(&quot;https://www.riigiteenused.ee/api/et/all&quot;)</code></pre>
 <p>Selle juures tasub tähele panna, et muutuja “regulatsioon” jätab listiks, mistõttu, ei saa seda cav/txt-na salvestada. Et csv-na salvestada, tuleb muutuja eemaldada (andmeLai$regulatsioon=NULL).</p>
 <ul>

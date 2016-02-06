@@ -1,20 +1,20 @@
 ##Riigiteenuste pakett
-See on riigiteenuste kaardistamisel tekkivate andmete (https://www.riigiteenused.ee/api/et/all) sisselugmist hõlbustav R-i lisamoodul (pakett).
+See on riigiteenuste kaardistamisel tekkivate andmete (https://www.riigiteenused.ee/api/et/all või inglise keeles kirjeldatud teenuste andmed https://www.riigiteenused.ee/api/en/all) sisselugmist hõlbustav R-i lisamoodul (pakett). Riigiteenuste kaardistamise projekti kohta loe siit: https://github.com/MKM-ITAO/riigiteenused. 
 
 ###Installeerimine
 
 ```{r, eval=FALSE}
-library(devtools)#kui devtools paketti pole, siis installi see install.packages("devtools")
+library("devtools")#kui devtools paketti pole, siis installi see install.packages("devtools")
 install_github("RRisto/riigiteenused")
 ```
 
 ###Kasutamine
 Hetkel on sisuliselt kaks funktsiooni, mida kasutada:
 
-- andmete sisselugemine laias formaadis (lisaks konverdib JSONIst R-i dataframe'iks):
+- andmete sisselugemine laias formaadis (lisaks konverdib JSONist R-i dataframe'iks):
 
 ```{r, eval=FALSE}
-library(riigiteenused)
+library("riigiteenused")
 andmedLai=andmedSisse("https://www.riigiteenused.ee/api/et/all")
 ```
 
