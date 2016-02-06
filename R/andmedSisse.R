@@ -1,9 +1,10 @@
-#andmete downloadi abifunktsioon
+#' andmete downloadi abifunktsioon
 #' @export
 andmedSisse=function(url) {
   #loeme andmed sisse
+  library(rjson)
   library(jsonlite)
-  fromJSON(readLines(url), flatten=T)
+  fromJSON(url, flatten=T)
 }
 
 
