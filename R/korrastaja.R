@@ -11,13 +11,15 @@ korrastaja=function(andmed, eemalda, mootmiseAasta) {
   nuti=meltimine("Nutirakendus.", data=andmed)
   digitv=meltimine("Digitelevisioon.", data=andmed)
   epost=meltimine("E-post.", data=andmed)
+  sms=meltimine("Tekstis", data=andmed) #shiny jaoks vaja
   #sms=meltimine("Tekstisõnum.", data=andmed) #shiny jaoks vaja
-  sms=meltimine(enc2utf8("Tekstisõnum."), data=andmed)
+  #sms=meltimine(enc2utf8("Tekstisõnum."), data=andmed)
   telefon=meltimine("Telefon.", data=andmed)
   faks=meltimine("Faks.", data=andmed)
   post=meltimine("Post.", data=andmed)
+  lett=meltimine("Letiteenus b", data=andmed) #shiny jaoks vaja
   #lett=meltimine("Letiteenus büroos.", data=andmed) #shiny jaoks vaja
-  lett=meltimine(enc2utf8("Letiteenus büroos."), data=andmed)
+  #lett=meltimine(enc2utf8("Letiteenus büroos."), data=andmed)
   kodus=meltimine("Kliendi juures.", data=andmed)
   #rbindime
   koos=rbind(veeb, iseteen, eesti, nuti, digitv, epost, sms, telefon, faks,
@@ -25,8 +27,8 @@ korrastaja=function(andmed, eemalda, mootmiseAasta) {
   #leiame kanali ja näitaja
   #stati saamiseks eemaldame punktid kanali nimedest
   koos$variable=gsub(".ee.", ".", as.character(koos$variable), fixed=T)
-  #koos$variable=gsub("Letiteenus büroos", "Letiteenus", as.character(koos$variable), fixed=T)
-  koos$variable=gsub(enc2utf8("Letiteenus büroos"), "Letiteenus", as.character(koos$variable), fixed=T)
+  koos$variable=gsub("Letiteenus büroos", "Letiteenus", as.character(koos$variable), fixed=T)
+  #koos$variable=gsub(enc2utf8("Letiteenus büroos"), "Letiteenus", as.character(koos$variable), fixed=T)
   koos$variable=gsub("E-iseteenindus", "Eiseteenindus", as.character(koos$variable), fixed=T)
   koos$variable=gsub("E-post", "Epost", as.character(koos$variable), fixed=T)
   koos$variable=gsub("Veebileht / portaal", "Veebileht", as.character(koos$variable), fixed=T)
