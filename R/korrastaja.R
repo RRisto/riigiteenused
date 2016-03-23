@@ -11,11 +11,13 @@ korrastaja=function(andmed, eemalda, mootmiseAasta) {
   nuti=meltimine("Nutirakendus.", data=andmed)
   digitv=meltimine("Digitelevisioon.", data=andmed)
   epost=meltimine("E-post.", data=andmed)
-  sms=meltimine("Tekstisõnum.", data=andmed) #shiny jaoks vaja
+  #sms=meltimine("Tekstisõnum.", data=andmed) #shiny jaoks vaja
+  sms=meltimine(enc2utf8("Tekstisõnum."), data=andmed)
   telefon=meltimine("Telefon.", data=andmed)
   faks=meltimine("Faks.", data=andmed)
   post=meltimine("Post.", data=andmed)
-  lett=meltimine("Letiteenus büroos.", data=andmed) #shiny jaoks vaja
+  #lett=meltimine("Letiteenus büroos.", data=andmed) #shiny jaoks vaja
+  lett=meltimine(enc2utf8("Letiteenus büroos."), data=andmed)
   kodus=meltimine("Kliendi juures.", data=andmed)
   #rbindime
   koos=rbind(veeb, iseteen, eesti, nuti, digitv, epost, sms, telefon, faks,
