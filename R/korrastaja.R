@@ -25,7 +25,8 @@ korrastaja=function(andmed, eemalda, mootmiseAasta) {
   #leiame kanali ja näitaja
   #stati saamiseks eemaldame punktid kanali nimedest
   koos$variable=gsub(".ee.", ".", as.character(koos$variable), fixed=T)
-  koos$variable=gsub("Letiteenus büroos", "Letiteenus", as.character(koos$variable), fixed=T)
+  #koos$variable=gsub("Letiteenus büroos", "Letiteenus", as.character(koos$variable), fixed=T)
+  koos$variable=gsub(enc2utf8("Letiteenus büroos"), "Letiteenus", as.character(koos$variable), fixed=T)
   koos$variable=gsub("E-iseteenindus", "Eiseteenindus", as.character(koos$variable), fixed=T)
   koos$variable=gsub("E-post", "Epost", as.character(koos$variable), fixed=T)
   koos$variable=gsub("Veebileht / portaal", "Veebileht", as.character(koos$variable), fixed=T)
