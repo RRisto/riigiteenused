@@ -39,6 +39,7 @@ andmedPikaks=function(andmedLai) {
 }
 
 #sama funktsioon, kuid kasutab data.table'i formaati
+#' @export
 andmedPikaksDT=function(andmedLai) {
   library(data.table)
   andmed=data.table(andmedLai)
