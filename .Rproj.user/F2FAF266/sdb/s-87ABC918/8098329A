@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{korrastaja}\n\\alias{korrastaja}\n%- Also NEED an '\\alias' for EACH other topic documented here.\n\\title{\nKanalite andmed pikaks}\n\\description{\nFunktsiooni andmedPikaks() alamfunktsioon. Votab info, mis on funktsiooniga andmedSisse() sisse loetud ning meltimine()/meltimineDT() poolt juba pisut toodeldud ning viib iga kanali andmed pikka formaati. Korraga tootab yhe aasta andmetega}\n\\usage{\nkorrastaja(andmed, eemalda, mootmiseAasta)\nkorrastajaDT(andmed, eemalda, mootmiseAasta)\n}\n%- maybe also 'usage' for other objects documented here.\n\\arguments{\n  \\item{andmed}{\nlaias formaadis riigiteenuste andmed, kus on ainult muutujad, mida on edaspidi vaja}\n  \\item{eemalda}{\nfraasid, mida on vaja pikas formaadis olevate veergude nimedest eemaldada (tyypliselt aastaarv, nt: \"2015.\"}\n  \\item{mootmiseAasta}{\nmootmise aasta, mille kohta statistikat koguti, vajalik, et teada, mis aastanumber mootmise aasta veergu kirjutada}\n}\n\\details{\n%%  ~~ If necessary, more details than the description above ~~\n}\n\\value{\n- korrastaja() tagastab dataframe'i\n\n- korrastajaDT() tagastab data.table'i\n}\n\\references{\n%% ~put references to the literature/web site here ~\n}\n\\author{\n%%  ~~who you are~~\n}\n\\note{\n%%  ~~further notes~~\n}\n\n%% ~Make other sections like Warning with \\section{Warning }{....} ~\n\n\\seealso{\n%% ~~objects to See Also as \\code{\\link{help}}, ~~~\n}\n\\examples{\n\n\n}\n% Add one or more standard keywords, see file 'KEYWORDS' in the\n% R documentation directory.\n\\keyword{ ~kwd1 }\n\\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line\n",
+    "created" : 1453810106286.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "537547741",
+    "id" : "8098329A",
+    "lastKnownWriteTime" : 1459707057,
+    "path" : "~/R/riigiteenused/man/korrastaja.Rd",
+    "project_path" : "man/korrastaja.Rd",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

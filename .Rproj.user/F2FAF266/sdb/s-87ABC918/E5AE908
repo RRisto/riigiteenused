@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{andmedPikaks}\n\\alias{andmedPikaks}\n%- Also NEED an '\\alias' for EACH other topic documented here.\n\\title{\nAndmed pikaks}\n\\description{\nvotab riigiteenuste laiad andmed, mis on alla laetud funktsiooniga andmedSisse() ning viib need pikka formaati.}\n\\usage{\nandmedPikaks(andmedLai)\nandmedPikaksDT(andmedLai)\n}\n%- maybe also 'usage' for other objects documented here.\n\\arguments{\n  \\item{andmedLai}{\nandmedSisse() funktsioonist tulnud riigiteenuste laias formaadis dataframe voi data.table'i}\n}\n\\details{\n\n}\n\\value{\n- andmedPikaks() tagastab pikas formaadis dataframe'i\n\n- andmedPikaksDT( ) tagastab pikas formaadis data.table'i\n}\n\\references{\nlaia ja pika formaadi kohat loe siit: http://vita.had.co.nz/papers/tidy-data.pdf\ndata.table'i kohta loe siit: https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.pdf}\n\\author{\nristohinno@gmail.com\n}\n\\note{\n%%  ~~further notes~~\n}\n\n%% ~Make other sections like Warning with \\section{Warning }{....} ~\n\n\\seealso{\n%% ~~objects to See Also as \\code{\\link{help}}, ~~~\n}\n\\examples{\n#andmedPikaks(andmedSisse(\"https://www.riigiteenused.ee/api/et/all\"))\n}\n% Add one or more standard keywords, see file 'KEYWORDS' in the\n% R documentation directory.\n\\keyword{ ~kwd1 }\n\\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line\n",
+    "created" : 1453884982535.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3124000600",
+    "id" : "E5AE908",
+    "lastKnownWriteTime" : 1459707080,
+    "path" : "~/R/riigiteenused/man/andmedPikaks.Rd",
+    "project_path" : "man/andmedPikaks.Rd",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

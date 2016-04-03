@@ -37,3 +37,31 @@ andmedPikaks=function(andmedLai) {
   andmedPikk=andmedPikk[!is.na(andmedPikk$link),]
   andmedPikk
 }
+
+#sama funktsioon, kuid kasutab data.table'i formaati
+andmedPikaksDT=function(andmedLai) {
+  library(data.table)
+  andmed=data.table(andmedLai)
+  andmedLai2015=andmed[, !grepl("empty.|2011.|2013.|2012.|2014.",
+                                names(andmed)), with=F]
+  andmedLai2014=andmed[, !grepl("empty.|2011.|2013.|2012.|2015.",
+                                names(andmed)), with=F]
+  andmedLai2013=andmed[, !grepl("empty.|2011.|2012.|2014.|2015.",
+                                names(andmed)), with=F]
+  andmedLai2012=andmed[, !grepl("empty.|2011.|2013.|2014.|2015.",
+                                names(andmed)), with=F]
+  andmedLai2011=andmed[, !grepl("empty.|2014.|2013.|2012.|2015.",
+                                names(andmed)), with=F]
+  andmedLaiEmpty=andmed[, !grepl("2014.|2011.|2013.|2012.|2015.",
+                                 names(andmed)), with=F]
+
+  puhas2015=korrastajaDT(andmedLai2015, "2015.", "2015")
+  puhas2014=korrastajaDT(andmedLai2014, "2014.", "2014")
+  puhas2013=korrastajaDT(andmedLai2013, "2013.", "2013")
+  puhas2012=korrastajaDT(andmedLai2012, "2012.", "2012")
+  puhas2011=korrastajaDT(andmedLai2011, "2011.", "2011")
+  puhasEmpty=korrastajaDT(andmedLaiEmpty, "empty.", "pole moodetud")
+  andmedPikk=rbind(puhas2015, puhas2014, puhas2013, puhas2012,puhas2011,
+                   puhasEmpty)
+  andmedPikk[, value:=as.numeric(as.character(value))]
+}

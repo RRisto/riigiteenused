@@ -13,6 +13,7 @@ andmedSisse(url)
   \item{url}{
 "https://www.riigiteenused.ee/api/et/all"
 }
+}
 \value{
 tagastab dataframe'i
 }
@@ -20,10 +21,10 @@ tagastab dataframe'i
 %% ~put references to the literature/web site here ~
 }
 \author{
-Risto Hinno, ristohinno.com
+Risto Hinno,  [ristohinno.com]
 }
 \note{
-rohkem infot riigiteenuste kaardistmaise kohta on siin: https://github.com/MKM-ITAO/riigiteenused. Annab üldjuhul hoiatuse "incomplete final line found", mis ei mojuta andmete sisselugemist.
+rohkem infot riigiteenuste kaardistamise kohta on siin: https://github.com/MKM-ITAO/riigiteenused.
 }
 
 \seealso{
@@ -31,14 +32,6 @@ rohkem infot riigiteenuste kaardistmaise kohta on siin: https://github.com/MKM-I
 }
 \examples{
 #andmedLai=andmedSisse("https://www.riigiteenused.ee/api/et/all")
-
-## The function is currently defined as
-function ()
-{
-    library(jsonlite)
-    fromJSON(readLines("https://www.riigiteenused.ee/api/et/all"),
-        flatten = T)
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

@@ -4,17 +4,41 @@
 \title{
 Laiast pikaks formaadiks}
 \description{
-Funktsiooni korrastaja() alamfunktsioon: Votab funktsiooniga andmedSisse() sisse loetud andmed, mida on tootlenud funktsioon andmedPikaks() ning teeb laiast formaadist pika formaadi.}
+Funktsiooni korrastaja()/korrastajaDT() alamfunktsioon: Votab funktsiooniga andmedSisse() sisse loetud andmed, mida on tootlenud funktsioon andmedPikaks()/andmedPikaksDT() ning teeb laiast formaadist pika formaadi.}
 \usage{
 meltimine(kanal, data)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{kanal}{
-Kanal peab olema yks neist "Veebileht / portaal.", "E-iseteenindus.""Eesti.ee.","Nutirakendus.""Digitelevisioon.","E-post.","Tekstisõnum.","Telefon.", "Faks.","Post.", "Letiteenus büroos.", "Kliendi juures."
+Kanal peab olema yks neist
+
+- "Veebileht / portaal.",
+
+- "E-iseteenindus.",
+
+- "Eesti.ee.",
+
+- "Nutirakendus.",
+
+- "Digitelevisioon.",
+
+- "E-post.",
+
+- "Tekstisõnum.",
+
+- "Telefon.",
+
+- "Faks.",
+
+- "Post.",
+
+- "Letiteenus.",
+
+- "Kliendi juures."
 }
   \item{data}{
-andmed peavad olema laias formaadis}
+andmed peavad olema laias formaadis. meltimineDT() puhul lisaks data.table'i formaadis}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
