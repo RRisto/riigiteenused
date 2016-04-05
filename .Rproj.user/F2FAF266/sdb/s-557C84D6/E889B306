@@ -1,0 +1,18 @@
+{
+    "contents" : "#abifunktsioon, mis teeb laiast pika formaadi\n#' @export\nmeltimine=function(kanal, data) {\n  library(reshape2)\n  #leiame ainult seda kanalit puudutavad muutujad\n  sub=data[, grepl(paste(kanal, \"|identifikaator|ministeerium|allasutus|tegevusvaldkond|teenusetyyp|makse\", sep=\"\"), names(data))]\n  #määran id-d, mis meltimisel meltimata jäävad\n  id=grep(c(\"identifikaator|ministeerium|allasutus|tegevusvaldkond|teenusetyyp|makse|link\"), names(sub), value=T)\n  #kui selle kanali kohta stati pole, anna vastuseks null\n  if(length(id)<7) {\n    tulem=NULL\n  } else {\n    #meldime andmed kitsaks\n    tulem=melt(sub, id=id)\n    #muudan variable nime ära, mis on kanalispets, muidu ei saa rbindida\n    names(tulem)=c(\"identifikaator\", \"tegevusvaldkond\", \"tyyp\", \"ministeerium\", \"allasutus\",\n                   \"makse\", \"link\",  \"variable\",\n                   \"value\")\n  }\n  tulem\n}\n\n#sama mis eelmine funktsioon, kuid töötab data.table' formaadiga\n#' @export\nmeltimineDT=function(kanal, data) {\n  library(data.table)\n  data=data.table(data)\n  sub=data[,grepl(paste(kanal, \"|identifikaator|ministeerium|allasutus|tegevusvaldkond|teenusetyyp|makse\", sep=\"\"),\n                  names(data)), with=F]\n\n  id=grep(c(\"identifikaator|ministeerium|allasutus|tegevusvaldkond|teenusetyyp|makse|link\"), names(sub), value=T)\n  if(length(id)<7) {\n    tulem=NULL\n  } else {\n    #meldime andmed kitsaks\n    tulem=melt(sub, id=id)\n    #muudan variable nime ära, mis on kanalispets, muidu ei saa rbindida\n    lingiNimi=names(tulem)[7]\n    setnames(tulem, old=lingiNimi, new=c(\"link\"))\n  }\n  tulem\n}\n",
+    "created" : 1453812684435.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1718098314",
+    "id" : "E889B306",
+    "lastKnownWriteTime" : 1459881887,
+    "path" : "~/R/riigiteenused/R/meltimine.R",
+    "project_path" : "R/meltimine.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

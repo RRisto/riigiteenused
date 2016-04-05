@@ -24,6 +24,7 @@ meltimine=function(kanal, data) {
 #' @export
 meltimineDT=function(kanal, data) {
   library(data.table)
+  data=data.table(data)
   sub=data[,grepl(paste(kanal, "|identifikaator|ministeerium|allasutus|tegevusvaldkond|teenusetyyp|makse", sep=""),
                   names(data)), with=F]
 

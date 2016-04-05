@@ -5,7 +5,7 @@ Version: 1.1
 Date: 2016-01-26
 Author: Risto Hinno
 Maintainer: <ristohinno@gmail.com>
-Description: Laeb riigitenuste andmed (https://www.riigiteenused.ee/api/et/all) andmed alla ning teeb laiast formaadist pika formaadi
+Description: Laeb riigiteenuste andmed (https://www.riigiteenused.ee/api/et/all) andmed alla ning viib laiast formaadist pikka formaati
 License: Creative Commons License
 LazyData: TRUE
 RoxygenNote: 5.0.1
