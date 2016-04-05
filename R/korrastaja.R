@@ -50,7 +50,7 @@ korrastaja=function(andmed, eemalda, mootmiseAasta) {
 }
 
 #sama, mis eelmine funktsioon, kuid kasutab data.table'i fomraati
-# @export
+#' @export
 korrastajaDT=function(andmed, eemalda, mootmiseAasta) {
   library(data.table)
   #eemalda - mis osa columnite nimedest tuleb eemdalda
