@@ -1,7 +1,7 @@
 Package: riigiteenused
 Type: Package
 Title: Riigiteenuste andmete sisselugemine
-Version: 0.1
+Version: 1.1
 Date: 2016-01-26
 Author: Risto Hinno
 Maintainer: <ristohinno@gmail.com>
