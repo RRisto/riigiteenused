@@ -42,7 +42,6 @@ andmedPikaks=function(andmedLai) {
 #' @export
 andmedPikaksDT=function(andmedLai) {
   library(data.table)
-  andmed=data.table(andmedLai)
   andmedLai2015=andmed[, !grepl("empty.|2011.|2013.|2012.|2014.",
                                 names(andmed)), with=F]
   andmedLai2014=andmed[, !grepl("empty.|2011.|2013.|2012.|2015.",

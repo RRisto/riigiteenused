@@ -1,0 +1,18 @@
+{
+    "contents" : "#' andmete downloadi abifunktsioon\n#' @export\nandmedSisse=function(url) {\n  #loeme andmed sisse\n  library(rjson)\n  library(jsonlite)\n  fromJSON(url, flatten=T)\n}\n\n\n",
+    "created" : 1460309822967.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2661650821",
+    "id" : "13316BE1",
+    "lastKnownWriteTime" : 1454788341,
+    "path" : "~/R/riigiteenused/R/andmedSisse.R",
+    "project_path" : "R/andmedSisse.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

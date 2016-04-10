@@ -7,6 +7,7 @@ Author: Risto Hinno
 Maintainer: <ristohinno@gmail.com>
 Description: Laeb riigiteenuste andmed (https://www.riigiteenused.ee/api/et/all) andmed alla ning viib laiast formaadist pikka formaati
 License: Creative Commons License
+Depends: data.table
 LazyData: TRUE
 RoxygenNote: 5.0.1
 devtools::use_package("data.table")

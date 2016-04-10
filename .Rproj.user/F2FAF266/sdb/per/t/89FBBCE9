@@ -1,0 +1,18 @@
+{
+    "contents" : "##Riigiteenuste pakett\nSee on riigiteenuste kaardistamisel tekkivate andmete (https://www.riigiteenused.ee/api/et/all või inglise keeles kirjeldatud teenuste andmed https://www.riigiteenused.ee/api/en/all) sisselugmist hõlbustav R-i lisamoodul (pakett). Riigiteenuste kaardistamise projekti kohta loe siit: https://github.com/MKM-ITAO/riigiteenused. \n\n###Installeerimine\n\n```{r, eval=FALSE}\nlibrary(\"devtools\")#kui devtools paketti pole, siis installi see install.packages(\"devtools\")\ninstall_github(\"RRisto/riigiteenused\")\n```\n\n###Kasutamine\nHetkel on sisuliselt kaks funktsiooni, mida kasutada:\n\n- andmete sisselugemine laias formaadis (lisaks konverdib JSONist R-i dataframe'iks):\n\n```{r, eval=FALSE}\nlibrary(\"riigiteenused\")\nandmedLai=andmedSisse(\"https://www.riigiteenused.ee/api/et/all\")\n```\n\nSelle juures tasub tähele panna, et muutuja \"regulatsioon\" jätab listiks, mistõttu, ei saa seda cav/txt-na salvestada. Et csv-na salvestada, tuleb muutuja eemaldada (andmeLai$regulatsioon=NULL).\n\n- andmete laiast fromaadist pikaks formaadiks tegemine (eemaldab need muutujad, mis on laias formaadis: \"regulatsioon\", \"objectId\", \"eluarisyndmus\", \"kirjeldus\",\"eeltingimus\", \"jareltingimus\", \"createdAt\",\"updatedAt\", \"keel\", \"osakondyksus\", \"omanikunimi\",\"omanikutelefon\",\"omanikuemail\",\"konfinfo\", \"seotuddokumendid\", \"seisund\",\"muudatustvajav\", \"aegumisekpv\", \"funktsioon\", \"veebiaadress\"):\n\n```{r, eval=FALSE}\nandmedPikk=andmedPikaks(andmedLai)\n```\n\nPika ja laia andmeformaadi kohta loe siit: http://vita.had.co.nz/papers/tidy-data.pdf\n\n###Probleemid\nProbleemide korral kirjuta [siia](https://github.com/RRisto/riigiteenused/issues \"https://github.com/RRisto/riigiteenused/issues\") \n",
+    "created" : 1460309830595.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "572685807",
+    "id" : "89FBBCE9",
+    "lastKnownWriteTime" : 1454789189,
+    "path" : "~/R/riigiteenused/readme.Rmd",
+    "project_path" : "readme.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
