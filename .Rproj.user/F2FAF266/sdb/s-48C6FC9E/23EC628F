@@ -1,17 +1,17 @@
 {
     "contents" : "Package: riigiteenused\nType: Package\nTitle: Riigiteenuste andmete sisselugemine\nVersion: 1.1\nDate: 2016-01-26\nAuthor: Risto Hinno\nMaintainer: <ristohinno@gmail.com>\nDescription: Laeb riigiteenuste andmed (https://www.riigiteenused.ee/api/et/all) andmed alla ning viib laiast formaadist pikka formaati\nLicense: Creative Commons License\nDepends: data.table\nLazyData: TRUE\nRoxygenNote: 5.0.1\ndevtools::use_package(\"data.table\")\ndevtools::use_package(\"jsonlite\")\ndevtools::use_package(\"reshape2\")\n\n",
-    "created" : 1460309833995.000,
+    "created" : 1460312131210.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "77524615",
-    "id" : "A4954F9C",
-    "lastKnownWriteTime" : 1460310990,
+    "id" : "23EC628F",
+    "lastKnownWriteTime" : 1460312943,
     "path" : "~/R/riigiteenused/DESCRIPTION",
     "project_path" : "DESCRIPTION",
     "properties" : {
     },
-    "relative_order" : 6,
+    "relative_order" : 12,
     "source_on_save" : false,
     "type" : "dcf"
 }
