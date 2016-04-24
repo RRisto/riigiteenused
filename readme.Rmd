@@ -26,7 +26,13 @@ Selle juures tasub tähele panna, et muutuja "regulatsioon" jätab listiks, mist
 andmedPikk=andmedPikaks(andmedLai)
 ```
 
+- kiiremaks töötlemiseks kasuta funktsiooni, mis kasutab data.table'i formaati (tagastab tulemuse nii data.frame ja data.table'ina):
+```{r, eval=FALSE}
+andmedPikkDT=andmedPikaksDT(andmedLai)
+```
 Pika ja laia andmeformaadi kohta loe siit: http://vita.had.co.nz/papers/tidy-data.pdf
+
+Data.table'i kohta loe siit: [https://github.com/Rdatatable/data.table/wiki](https://github.com/Rdatatable/data.table/wiki "https://github.com/Rdatatable/data.table/wiki")
 
 ###Probleemid
 Probleemide korral kirjuta [siia](https://github.com/RRisto/riigiteenused/issues "https://github.com/RRisto/riigiteenused/issues") 
