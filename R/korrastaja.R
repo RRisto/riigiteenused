@@ -20,10 +20,6 @@ korrastaja=function(andmed, mootmiseAasta) {
     koos[,variable:=gsub(".ee.", ".", as.character(koos[,variable]), fixed=T)]
     koos[,variable:=gsub("Letiteenus büroos", "Teeninduslett",
                          as.character(koos[,variable]), fixed=T)]
-    # koos[,variable:=gsub("E-iseteenindus", "Eiseteenindus",
-    #                      as.character(koos[,variable]), fixed=T)]
-    # koos[,variable:=gsub("E-post", "Epost",
-                        # as.character(koos[,variable]), fixed=T)]
     koos[,variable:=gsub("Veebileht / portaal", "Veebileht",
                          as.character(koos[,variable]), fixed=T)]
     koos[,variable:=gsub("Kliendi juures", "Kliendijuures",
