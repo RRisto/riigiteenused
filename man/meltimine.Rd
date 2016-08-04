@@ -4,7 +4,7 @@
 \title{
 Laiast pikaks formaadiks}
 \description{
-Funktsiooni korrastaja()/korrastajaDT() alamfunktsioon: Votab funktsiooniga andmedSisse() sisse loetud andmed, mida on tootlenud funktsioon andmedPikaks()/andmedPikaksDT() ning teeb laiast formaadist pika formaadi.}
+Funktsiooni korrastaja() alamfunktsioon: Votab funktsiooniga andmedSisse() sisse loetud andmed, mida on tootlenud funktsioon andmedPikaks() ning teeb laiast formaadist pika formaadi.}
 \usage{
 meltimine(kanal, data)
 }
@@ -38,7 +38,7 @@ Kanal peab olema yks neist
 - "Kliendi juures."
 }
   \item{data}{
-andmed peavad olema laias formaadis. meltimineDT() puhul lisaks data.table'i formaadis}
+andmed peavad olema laias formaadis}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~

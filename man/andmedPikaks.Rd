@@ -7,20 +7,18 @@ Andmed pikaks}
 votab riigiteenuste laiad andmed, mis on alla laetud funktsiooniga andmedSisse() ning viib need pikka formaati.}
 \usage{
 andmedPikaks(andmedLai)
-andmedPikaksDT(andmedLai)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{andmedLai}{
-andmedSisse() funktsioonist tulnud riigiteenuste laias formaadis dataframe voi data.table'i}
+andmedSisse() funktsioonist tulnud riigiteenuste laias formaadis dataframe/data.table'i}
 }
 \details{
 
 }
 \value{
-- andmedPikaks() tagastab pikas formaadis dataframe'i
 
-- andmedPikaksDT( ) tagastab pikas formaadis data.table'i
+- tagastab pikas formaadis data.table'i/data.frame'i
 }
 \references{
 laia ja pika formaadi kohat loe siit: http://vita.had.co.nz/papers/tidy-data.pdf

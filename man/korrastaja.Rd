@@ -4,10 +4,9 @@
 \title{
 Kanalite andmed pikaks}
 \description{
-Funktsiooni andmedPikaks() alamfunktsioon. Votab info, mis on funktsiooniga andmedSisse() sisse loetud ning meltimine()/meltimineDT() poolt juba pisut toodeldud ning viib iga kanali andmed pikka formaati. Korraga tootab yhe aasta andmetega}
+Funktsiooni andmedPikaks() alamfunktsioon. Votab info, mis on funktsiooniga andmedSisse() sisse loetud ning meltimine() poolt juba pisut toodeldud ning viib iga kanali andmed pikka formaati. Korraga tootab yhe aasta andmetega}
 \usage{
 korrastaja(andmed, eemalda, mootmiseAasta)
-korrastajaDT(andmed, eemalda, mootmiseAasta)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -22,9 +21,7 @@ mootmise aasta, mille kohta statistikat koguti, vajalik, et teada, mis aastanumb
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-- korrastaja() tagastab dataframe'i
-
-- korrastajaDT() tagastab data.table'i
+- tagastab data.table'i (data.frame'i)
 }
 \references{
 %% ~put references to the literature/web site here ~
