@@ -31,7 +31,8 @@ rohkem infot riigiteenuste kaardistamise kohta on siin: https://github.com/MKM-I
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-#andmedLai=andmedSisse("https://www.riigiteenused.ee/api/et/all")
+#andmedLai=andmedSisse() #vaikimisi eestikeelne API
+#andmedLai=andmedSisse("https://www.riigiteenused.ee/api/en/all")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
