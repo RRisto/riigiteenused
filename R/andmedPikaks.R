@@ -3,31 +3,26 @@
 #' @export
 andmedPikaks=function(andmedLai) {
   andmed=data.table(andmedLai)
-  #tee mõõtmise aasta järgi listiks
-  andmedLaiList=list(
-    andmedLai.2015=andmed[, !grepl("empty.|2011.|2013.|2012.|2014.",
-                                names(andmed)), with=F],
-  andmedLai.2014=andmed[, !grepl("empty.|2011.|2013.|2012.|2015.",
-                                names(andmed)), with=F],
-  andmedLai.2013=andmed[, !grepl("empty.|2011.|2012.|2014.|2015.",
-                                names(andmed)), with=F],
-  andmedLai.2012=andmed[, !grepl("empty.|2011.|2013.|2014.|2015.",
-                                names(andmed)), with=F],
-  andmedLai.2011=andmed[, !grepl("empty.|2014.|2013.|2012.|2015.",
-                                names(andmed)), with=F],
-  andmedLai.Empty=andmed[, !grepl("2014.|2011.|2013.|2012.|2015.",
-                                 names(andmed)), with=F])
-
-  years=gsub("[^0-9]","",names(andmedLaiList))#leiab aastad
-  years=ifelse(nchar(years)==0, "empty", years)#tühi element asenda "empty"ga
-  years=as.list(years)#tee listiks
-
-  andmedLaiList=Map(cbind, andmedLaiList, year = years)#lisa mõõtmise aasta
+  #mõõtmiste aastate väärtused
+  aastad=c("2011", "2012","2013","2014","2015", "empty")
+  #col nimede list, kus iga mõõtmise aasta kohta on vajalikud andmed
+  colNimed=list()
+  for(i in 1:length(aastad)) {
+    colNimed[[i]]=c(grep(paste(paste0(aastad[-i],"."), collapse = "|"),
+                                   names(andmed), value=T, invert=T))
+  }
+  #mapply eri aastate andmed listi
+  andmedLaiList=mapply(function(colNimed, andmed)
+    andmed[, colNimed, names(andmed), with=F],colNimed,
+    MoreArgs=list(andmed=andmed))
+  names(andmedLaiList)=aastad#lisit elementidele nimed
+  #lisa mõõtmise aasta muutuja
+  andmedLaiList=Map(cbind, andmedLaiList, year = as.list(aastad))
   #lapply läbi korrastaja
   andmedLaiList <- lapply(andmedLaiList,
                           function(df) {
-    korrastaja(andmed=df, mootmiseAasta=df$year[1])
-  })
+                            korrastaja(andmed=df, mootmiseAasta=df$year[1])
+                          })
   #tee üheks data frame/table-ks
   andmedPikk=rbindlist(andmedLaiList, fill=TRUE)
   andmedPikk[, value:=as.numeric(as.character(value))]#tee characteriks
