@@ -2,5 +2,3 @@
 
 export(andmedPikaks)
 export(andmedSisse)
-export(korrastaja)
-export(meltimine)

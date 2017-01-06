@@ -8,6 +8,7 @@ library("devtools")#kui devtools paketti pole, siis installi see install.package
 install_github("RRisto/riigiteenused")
 ```
 
+
 ###Kasutamine
 Hetkel on sisuliselt kaks funktsiooni, mida kasutada:
 
@@ -18,16 +19,12 @@ library("riigiteenused")
 andmedLai=andmedSisse()
 ```
 
-Selle juures tasub tähele panna, et muutuja "regulatsioon" jätab listiks, mistõttu, ei saa seda .csv/.txt-na salvestada. Et .csv-na salvestada, tuleb muutuja eemaldada (andmedLai$regulatsioon=NULL).
-
-- andmete laiast fromaadist pikaks formaadiks tegemine (eemaldab need muutujad: "regulatsioon", "objectId", "eluarisyndmus", "kirjeldus","eeltingimus", "jareltingimus", "createdAt","updatedAt", "keel", "osakondyksus", "omanikunimi","omanikutelefon","omanikuemail","konfinfo", "seotuddokumendid", "seisund","muudatustvajav", "aegumisekpv", "funktsioon", "veebiaadress") (tagastab data.table'i/data.frame'i):
+- andmete laiast fromaadist pikaks formaadiks tegemine  (tagastab data.frame'i):
 ```{r, eval=FALSE}
 andmedPikk=andmedPikaks(andmedLai)
 ```
 
 Pika ja laia andmeformaadi kohta loe siit: http://vita.had.co.nz/papers/tidy-data.pdf
-
-Data.table'i kohta loe siit: [https://github.com/Rdatatable/data.table/wiki](https://github.com/Rdatatable/data.table/wiki "https://github.com/Rdatatable/data.table/wiki")
 
 ###Probleemid
 Probleemide korral kirjuta [siia](https://github.com/RRisto/riigiteenused/issues "https://github.com/RRisto/riigiteenused/issues") 
