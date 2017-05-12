@@ -1,7 +1,7 @@
-##Riigiteenuste pakett
+## Riigiteenuste pakett
 See on riigiteenuste kaardistamisel tekkivate andmete (https://www.riigiteenused.ee/api/et/all või inglise keeles kirjeldatud teenuste andmed https://www.riigiteenused.ee/api/en/all) sisselugemist hõlbustav R-i pakett. Riigiteenuste kaardistamise projekti kohta loe siit: https://github.com/MKM-ITAO/riigiteenused. 
 
-###Installeerimine
+### Installeerimine
 
 ```{r, eval=FALSE}
 library("devtools")#kui devtools paketti pole, siis installi see install.packages("devtools")
@@ -9,7 +9,7 @@ install_github("RRisto/riigiteenused")
 ```
 
 
-###Kasutamine
+### Kasutamine
 Hetkel on sisuliselt kaks funktsiooni, mida kasutada:
 
 - andmete sisselugemine laias formaadis (lisaks konverdib JSONist R-i dataframe'iks):
@@ -26,5 +26,5 @@ andmedPikk=andmedPikaks(andmedLai)
 
 Pika ja laia andmeformaadi kohta loe siit: http://vita.had.co.nz/papers/tidy-data.pdf
 
-###Probleemid
+### Probleemid
 Probleemide korral kirjuta [siia](https://github.com/RRisto/riigiteenused/issues "https://github.com/RRisto/riigiteenused/issues") 
